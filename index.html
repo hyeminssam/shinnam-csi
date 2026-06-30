@@ -38,21 +38,19 @@
 <body>
 
 <div class="container">
-    <div class="digital-header">SHINNAM CSI CORE SYSTEM v5.1</div>
+    <div class="digital-header">SHINNAM CSI CORE SYSTEM v5.3</div>
     <h1>⏱️ 과학실 폭발 예고 미스터리</h1>
     
-    <!-- 1단계: 사건 개요 -->
     <div id="screen1" class="screen active">
         <h2>📌 1단계: 사건 발생 및 수사 개시</h2>
         <div class="story-box">
-            <div class="alert-bar">🚨 수사령: 겉보기 단서에 속지 마세요. 단계별 조각을 직접 연결해야 정답이 보입니다.</div>
-            <p>어제 저녁 <strong>오후 5시 30분</strong>, 누군가 신남중학교 과학실 문틀에 협박 편지를 붙였습니다. 범인은 편지를 붙이다가 날카로운 철문 모서리에 손을 베여 피를 흘린 것으로 추정됩니다.</p>
-            <p style="margin-top: 8px;">현장 주변과 체육관 등에서 주인 모를 <strong>붉은 흔적이 지워진 증거물 3개</strong>를 확보했습니다. 정밀 수사를 시작합니다.</p>
+            <div class="alert-bar">🚨 수사령: 철문에 피를 흘린 범인의 도주 행적과 도구의 인과관계를 밝히세요!</div>
+            <p>어제 저녁 <strong>오후 5시 30분</strong>, 누군가 신남중학교 과학실 철문에 협박 편지를 붙였습니다. 범인은 편지를 붙이다가 날카로운 철문 모서리에 <strong>오른손바닥</strong>을 깊게 베여 철문에 피를 흘렸습니다.</p>
+            <p style="margin-top: 8px;">수사대는 범인이 다친 손으로 무언가를 쥐거나 짚고 도망쳤을 것으로 보고, 현장 주변에서 <strong>붉은 흔적이 지워진 증거물 3개</strong>를 수거했습니다.</p>
         </div>
         <button class="btn" onclick="nextScreen(2)">2단계: 과학실 현장 감식 조사 🔍</button>
     </div>
 
-    <!-- 2단계: 현장 감식 -->
     <div id="screen2" class="screen">
         <h2>🔍 2단계: 범죄 현장 정밀 감식</h2>
         <p style="font-size:14px; text-align:left;">과학실 주변의 미세 단서를 조사하여 수사 노트에 기록하세요.</p>
@@ -60,7 +58,7 @@
             <div class="card">
                 <strong>🚪 과학실 철문 조사</strong>
                 <button class="inner-btn" onclick="showData('site1')">흔적 감식</button>
-                <div id="site1" class="clickable-text">📍 철문 모서리에 범인의 혈흔이 남아있으며, 추가로 **동물 사료 알갱이(토끼용)**가 바닥에 한 개 떨어져 있는 것이 확인됨.</div>
+                <div id="site1" class="clickable-text">📍 철문 모서리에 범인의 혈흔이 묻어있고, 그 바로 아래 바닥에 <strong>토끼용 사료 알갱이</strong>가 한 개 떨어져 있음.</div>
             </div>
             <div class="card">
                 <strong>🚰 복도 수돗가 조사</strong>
@@ -70,20 +68,19 @@
             <div class="card">
                 <strong>📹 복도 CCTV 분석</strong>
                 <button class="inner-btn" onclick="showData('site3')">녹화 확인</button>
-                <div id="site3" class="clickable-text">📍 어제 오후 5시 35분, 한 학생이 다급하게 복도 수돗가로 뛰어와 들고 있던 도구를 비누로 박박 닦는 장면 포착.</div>
+                <div id="site3" class="clickable-text">📍 어제 오후 5시 35분, 한 학생이 <u>오른손에 피를 흘리며</u> 다급하게 복도 수돗가로 뛰어와 들고 있던 도구의 손잡이를 비누로 박박 닦는 장면 포착.</div>
             </div>
         </div>
         <button class="btn btn-nav" onclick="nextScreen(1)">이전</button>
         <button class="btn" onclick="nextScreen(3)">3단계: 실제 루미놀 실험 관찰 🧪</button>
     </div>
 
-    <!-- 3단계: 루미놀 관찰 -->
     <div id="screen3" class="screen">
         <h2>🧪 3단계: 유류 증거물 실제 실험 안내</h2>
         <p style="font-size:14px; text-align:left;">발견된 증거물 3개입니다. 눈앞의 실제 펠트지에 루미놀을 뿌려 반응 여부를 수사 노트에 적으세요.</p>
         <div class="grid-3">
             <div class="card" style="text-align:center;"><span>증거물 A</span><div class="item-icon">🏏</div><strong>알루미늄 야구 배트</strong></div>
-            <div class="card" style="text-align:center;"><span>증거물 B</span><div class="item-icon">🦯</div><strong>플라스틱 지팡이 손잡이</strong></div>
+            <div class="card" style="text-align:center;"><span>증거물 B</span><div class="item-icon">🦯</div><strong>플팡이(지팡이) 손잡이</strong></div>
             <div class="card" style="text-align:center;"><span>증거물 C</span><div class="item-icon">🏓</div><strong>나무 탁구채 모서리</strong></div>
         </div>
         <div class="story-box" style="margin-top:15px; font-size:13px; border-color:#ffeb3b;">
@@ -93,28 +90,27 @@
         <button class="btn" onclick="nextScreen(4)">4단계: 관계자 심문 및 인물 탐색 🗣️</button>
     </div>
 
-    <!-- 4단계: 용의자 심문 -->
     <div id="screen4" class="screen">
         <h2>🗣️ 4단계: 관계자 심문 및 주위 인물 탐색</h2>
-        <p style="font-size:14px; text-align:left;">세 명의 학생을 심문하고 소지품 정보를 확보하세요. (누가 누구에게 물건을 빌렸는지 파악해야 합니다.)</p>
+        <p style="font-size:14px; text-align:left;">세 명의 학생을 심문하고 소지품 정보를 확보하세요.</p>
         
         <div class="card" style="margin-bottom:10px;">
             <strong>👦 박탁구 </strong>
-            <p style="font-size:13px; color:#aaa; margin-top:5px;">"어제 5시부터 6시까지 탁구실에서 혼자 복식 연습 연습을 하느라 밖으로 나간 적이 없어요. 제 탁구채는 어제 비누로 깨끗이 닦아 보관함에 넣어놨죠. 손의 상처요? 오늘 아침에 숙제하다 생긴 거예요!"</p>
+            <p style="font-size:13px; color:#aaa; margin-top:5px;">"어제 5시부터 6시까지 탁구실에서 친구랑 계속 복식 연습 경기를 하느라 밖으로 나간 적이 없어요. 제 탁구채도 계속 제가 들고 쳤습니다. 손의 상처요? 오늘 아침에 숙제하다 생긴 거예요!"</p>
             <button class="inner-btn" onclick="showData('p1')">주변인 탐색</button>
             <div id="p1" class="clickable-text">💬 탁구반 친구: "탁구는 어제 연습 끝날 때까지 저랑 계속 같이 경기해서 알리바이가 확실해요."</div>
         </div>
 
         <div class="card" style="margin-bottom:10px;">
             <strong>🧢 김야구 </strong>
-            <p style="font-size:13px; color:#aaa; margin-top:5px;">"어제 방과 후에 복도에 있는 철제 사물함을 제 야구 배트로 쾅쾅 치며 장난쳤어요. 배트에 붉은 얼룩 같은 게 잔뜩 남았길래 대충 물티슈로 닦아두었습니다. 전 어제 다친 적도 없어요."</p>
+            <p style="font-size:13px; color:#aaa; margin-top:5px;">"어제 방과 후에 복도에 있는 철제 사물함을 제 야구 배트로 쾅쾅 치며 장난쳤어요. 배트에 붉은 얼룩 같은 게 잔뜩 남았길래 대충 물티슈로 닦아두었습니다. 전 어제 다친 적도 없고, 지팡이는 제 할머니 물건인데 오늘 친구랑 장난치면서 놀려고 가져온 후 철제 사물함 옆에 세워둔 거였어요."</p>
             <button class="inner-btn" onclick="showData('p2')">주변인 탐색</button>
-            <div id="p2" class="clickable-text">💬 복도 목격자: "어제 5시 25분쯤 복도에서 최가축이 다리가 아프다면서 김야구에게 지팡이를 빌려서 들고 가는 걸 봤어요. 김야구는 배트만 들고 장난치고 있었고요."</div>
+            <div id="p2" class="clickable-text">💬 복도 목격자: "어제 5시 25분쯤 복도 구석 캐비닛 밑으로 토끼가 들어갔나 봐요. 생물동아리 최가축이 당황하더니, 옆에 있던 김야구에게 달려가 <strong>'토끼가 깊숙이 껴서 손이 안 닿아! 저 지팡이 갈고리 손잡이로 걸어서 꺼내게 잠깐만 빌려줘!'</strong> 하고 지팡이를 가져가는 걸 봤어요."</div>
         </div>
 
         <div class="card" style="margin-bottom:10px;">
             <strong>🧑 최가축 </strong>
-            <p style="font-size:13px; color:#aaa; margin-top:5px;">"어제 오후 내내 생물실에서 탈출한 토끼를 잡으러 다녔어요. 겨우 잡았는데 토끼가 이빨로 도구를 물어뜯어서 토끼 피가 조금 묻었을 뿐입니다. 전 손을 다치지 않았고, 협박장도 모릅니다!"</p>
+            <p style="font-size:13px; color:#aaa; margin-top:5px;">"저는 신남중학교 생물동아리 부장입니다. 어제 오후 내내 생물실에서 탈출한 토끼를 잡으러 다녔어요. 좁은 구석에 낀 토끼를 꺼내다가 토끼가 이빨로 도구를 물어뜯어서 토끼 피가 조금 묻었을 뿐입니다. 저는 손을 다치지 않았고, 협박장도 모릅니다!"</p>
             <button class="inner-btn" onclick="showData('p3')">소지품 정밀 조사</button>
             <div id="p3" class="clickable-text">💬 소지품 검사 결과: 최가축의 주머니에서 <u>과학실 철문 바닥에서 발견된 것과 완벽히 일치하는 토끼 사료 알갱이</u>들이 나옴.</div>
         </div>
@@ -123,7 +119,6 @@
         <button class="btn" onclick="nextScreen(5)">5단계: 국과수 정밀 분석 결과 🧪</button>
     </div>
 
-    <!-- 5단계: 국과수 감정서 -->
     <div id="screen5" class="screen">
         <h2>🧪 5단계: 국과수 정밀 분석 보고서</h2>
         <p style="font-size:14px; text-align:left;">루미놀 반응이 나온 도구들의 진짜 성분을 정밀 기계로 교차 검증한 최종 보고서입니다.</p>
@@ -140,7 +135,7 @@
                 <tr>
                     <td><strong>증거물 A (야구 배트)</strong></td>
                     <td style="color:#00e5ff; font-weight:bold;">🔵 푸른 빛 발생</td>
-                    <td style="color:#ff4a4a; font-weight:bold;">사람 피 아님 </td>
+                    <td style="color:#ff4a4a; font-weight:bold;">사람 피 아님 (철 사물함에서 묻은 붉은 '녹' 성분)</td>
                 </tr>
                 <tr>
                     <td><strong>증거물 B (지팡이 손잡이)</strong></td>
@@ -157,7 +152,7 @@
         
         <div class="story-box" style="border-left-color: #ff4a4a; margin-top: 20px; font-weight: bold; color: #fff;">
             🚨 [수사 종결] 수집한 모든 단서 조각을 엮으세요! <br>
-            누가 누구에게 도구를 빌렸는지, 왜 지팡이에서 진짜 사람의 피가 나왔는지, 그리고 범인이 알리바이를 숨기기 위해 루미놀의 어떤 한계를 이용해 토끼 피라고 거짓말을 했는지 논리적으로 조립해 활동지를 완성하세요!
+            범인이 철문에 피를 흘린 뒤 왜 지팡이 손잡이에서도 똑같은 사람의 피가 검출되었는지 물리적 행동 과정을 유추하고, 범인이 알리바이를 숨기기 위해 루미놀의 어떤 한계를 이용해 토끼 피라고 거짓말을 했는지 논리적으로 조립해 활동지를 완성하세요!
         </div>
         <button class="btn btn-nav" onclick="nextScreen(4)">이전</button>
     </div>
