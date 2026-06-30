@@ -10,113 +10,113 @@
         body { font-family: 'Noto Sans KR', sans-serif; background-color: #0b0c10; color: #c5c6c7; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
         .container { max-width: 850px; width: 100%; background: #1f2833; padding: 40px 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.7); border: 1px solid #45f3ff; text-align: center; }
         .digital-header { font-family: 'Orbitron', sans-serif; color: #45f3ff; letter-spacing: 2px; font-size: 14px; margin-bottom: 5px; }
-        h1 { font-size: 28px; color: #ffffff; text-shadow: 0 0 10px rgba(69, 243, 255, 0.5); margin-bottom: 25px; font-weight: 700; }
+        h1 { font-size: 26px; color: #ffffff; text-shadow: 0 0 10px rgba(69, 243, 255, 0.5); margin-bottom: 25px; font-weight: 700; }
         h1 span { color: #ff4a4a; }
         h2 { color: #45f3ff; font-size: 20px; margin-bottom: 20px; border-left: 4px solid #45f3ff; padding-left: 10px; text-align: left; }
         .screen { display: none; animation: fadeIn 0.4s ease-in-out forwards; }
         .screen.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .btn { background: linear-gradient(135deg, #45f3ff, #1f2833); color: #0b0c10; border: 1px solid #45f3ff; padding: 14px 28px; font-size: 16px; font-weight: bold; cursor: pointer; border-radius: 30px; margin-top: 25px; display: inline-block; transition: all 0.3s; }
+        .btn { background: linear-gradient(135deg, #45f3ff, #1f2833); color: #0b0c10; border: 1px solid #45f3ff; padding: 12px 24px; font-size: 15px; font-weight: bold; cursor: pointer; border-radius: 30px; margin-top: 25px; display: inline-block; transition: all 0.3s; }
         .btn:hover { background: #45f3ff; transform: scale(1.05); }
-        .btn-danger { background: linear-gradient(135deg, #ff4a4a, #1f2833); color: white; border-color: #ff4a4a; }
-        .story-box { background: #151a21; padding: 25px; border-radius: 8px; border: 1px solid #2f3b4c; text-align: left; line-height: 1.8; margin-bottom: 20px; }
+        .story-box { background: #151a21; padding: 22px; border-radius: 8px; border: 1px solid #2f3b4c; text-align: left; line-height: 1.8; margin-bottom: 20px; }
         .crimson-alert { color: #ff4a4a; font-weight: bold; background: rgba(255, 74, 74, 0.1); padding: 10px; border-radius: 5px; border-left: 4px solid #ff4a4a; margin-bottom: 15px; }
         .evidence-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 25px; }
         .evidence-card { background: #151a21; padding: 20px; border-radius: 12px; border: 1px solid #2f3b4c; }
         .item-graphic { width: 90px; height: 90px; margin: 15px auto; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; background: #252e3b; }
-        .lab-alert { background: #252e3b; padding: 12px; border-radius: 6px; font-size: 14px; color: #ffeb3b; border: 1px dashed #ffeb3b; margin-top: 15px; display: none; }
-        .suspect-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; }
-        .suspect-card { display: flex; background: #151a21; padding: 20px; border-radius: 12px; border-left: 5px solid #4caf50; border-top: 1px solid #2f3b4c; border-right: 1px solid #2f3b4c; border-bottom: 1px solid #2f3b4c; align-items: center; }
+        .suspect-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px; }
+        .suspect-card { display: flex; background: #151a21; padding: 15px; border-radius: 12px; border-left: 5px solid #4caf50; border-top: 1px solid #2f3b4c; border-right: 1px solid #2f3b4c; border-bottom: 1px solid #2f3b4c; align-items: center; }
         .suspect-card.witness { border-left-color: #ff9800; }
-        .avatar { width: 70px; height: 70px; border-radius: 50%; background: #252e3b; display: flex; align-items: center; justify-content: center; font-size: 35px; margin-right: 20px; flex-shrink: 0; }
+        .avatar { width: 65px; height: 65px; border-radius: 50%; background: #252e3b; display: flex; align-items: center; justify-content: center; font-size: 32px; margin-right: 20px; flex-shrink: 0; }
         .suspect-details { text-align: left; }
-        .suspect-name { font-weight: bold; color: #4caf50; font-size: 17px; margin-bottom: 5px; display: block; }
+        .suspect-name { font-weight: bold; color: #4caf50; font-size: 16px; margin-bottom: 5px; display: block; }
         .suspect-card.witness .suspect-name { color: #ff9800; }
-        .suspect-quote { font-style: italic; color: #a5a6a7; line-height: 1.5; }
+        .suspect-quote { font-style: italic; color: #a5a6a7; font-size: 14px; line-height: 1.5; }
         @media (max-width: 600px) { .evidence-container { grid-template-columns: 1fr; } .suspect-card { flex-direction: column; } .avatar { margin-right: 0; margin-bottom: 15px; } .suspect-details { text-align: center; } }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="digital-header">SINNAM MIDDLE SCHOOL • CSI DATABASE</div>
+    <div class="digital-header">SINNAM MIDDLE SCHOOL • CSI EXPERT SYSTEM</div>
     
     <!-- 화면 1: 오프닝 -->
     <div id="screen1" class="screen active">
         <h1>🚨 신남중 <span>과학실 폭발 예고</span> 사건</h1>
         <div class="story-box">
-            <div class="crimson-alert">⚠️ 수사 명령: 직접 실험하고 증거를 확보하여 보고서를 작성하라!</div>
-            <p>어제 저녁, 신남중학교 과학실 문에 <strong>"내일 학교를 폭파하겠다"</strong>는 협박 편지가 붙었습니다.</p>
-            <p style="margin-top: 10px;">범인은 편지를 붙이다 문틀 모서리에 손을 베여 피를 흘린 것으로 추정되나, 흔적을 지워두었습니다. 과학수사대는 현장에서 붉은 액체가 묻은 <strong>3개의 증거물</strong>을 확보했습니다.</p>
-            <p style="margin-top: 10px;">지금 바로 <strong>[활동지]</strong>를 준비하고 단계별 수사를 시작하십시오!</p>
+            <div class="crimson-alert">⚠️ 수사 지침: 루미놀의 과학적 한계와 용의자의 알리바이를 대조하라.</div>
+            <p><strong>[사건 타임라인]</strong> 어제 방과 후인 <strong>오후 5시 30분</strong>, 누군가 과학실 문틀에 협박 편지를 붙였습니다. 범인은 편지를 붙이다 날카로운 모서리에 손을 베여 피를 흘렸고 흔적을 급히 닦아낸 뒤 도주했습니다.</p>
+            <p style="margin-top: 10px;">현장 근처에서 붉은 흔적이 있는 <strong>증거물 3개</strong>를 수거했습니다. 눈앞의 실제 실험과 용의자 심문 기록을 조합해 진범을 찾으세요!</p>
         </div>
-        <button class="btn" onclick="nextScreen(2)">1단계: 실험실 진입하기 🧪</button>
+        <button class="btn" onclick="nextScreen(2)">1단계: 실험실 분석 시작 🧪</button>
     </div>
 
     <!-- 화면 2: 루미놀 반응 안내 -->
     <div id="screen2" class="screen">
-        <h2>🧪 1단계: 증거물 루미놀 반응 관찰</h2>
-        <p style="margin-bottom: 20px;">현장에서 수거한 3개의 물건입니다. 눈앞의 펠트지에 루미놀 용액을 분사하세요!</p>
+        <h2>🧪 1단계: 실제 루미놀 실험 기록</h2>
+        <p style="margin-bottom: 20px;">수거된 3개의 증거물입니다. 눈앞의 펠트지에 루미놀을 분사하여 반응 여부를 <strong>[활동지]</strong>에 체크하세요.</p>
         
         <div class="evidence-container">
             <div class="evidence-card">
                 <span style="color:#45f3ff; font-weight:bold;">증거물 A</span>
                 <div class="item-graphic">🏏</div>
                 <p style="font-weight:bold;">야구 배트</p>
-                <button class="btn btn-danger" style="padding:8px 16px; font-size:13px;" onclick="showLabAlert()">검사하기</button>
             </div>
             <div class="evidence-card">
                 <span style="color:#45f3ff; font-weight:bold;">증거물 B</span>
                 <div class="item-graphic">🦯</div>
                 <p style="font-weight:bold;">지팡이 손잡이</p>
-                <button class="btn btn-danger" style="padding:8px 16px; font-size:13px;" onclick="showLabAlert()">검사하기</button>
             </div>
             <div class="evidence-card">
                 <span style="color:#45f3ff; font-weight:bold;">증거물 C</span>
                 <div class="item-graphic">🏓</div>
                 <p style="font-weight:bold;">탁구채 모서리</p>
-                <button class="btn btn-danger" style="padding:8px 16px; font-size:13px;" onclick="showLabAlert()">검사하기</button>
             </div>
         </div>
         
-        <div id="labAlertBox" class="lab-alert">
-            🔬 <strong>[수사 지침]</strong> 불을 끄고, 준비된 펠트지 그림에 루미놀을 직접 뿌려 결과를 확인한 뒤 <strong>활동지 1번 표</strong>에 적으세요!
+        <div class="story-box" style="margin-top:25px; background:#1a222d; border-color:#45f3ff;">
+            <strong>💡 [국과수 과학수사 노트]</strong><br>
+            루미놀 용액은 사람의 피뿐만 아니라 <strong>모든 동물의 혈액</strong>과도 똑같이 푸른 형광 반응을 보입니다. 또한, 피가 아니더라도 오래된 <strong>금속의 녹(산화철)이나 구리 성분</strong>과 반응해도 형광 빛이 나타나는 한계점(위양성)이 있으므로 주의해야 합니다.
         </div>
         
-        <button class="btn" onclick="nextScreen(3)" style="margin-top:30px;">2단계: 용의자 심문실 이동 👤</button>
+        <button class="btn" onclick="nextScreen(3)">2단계: 용의자 알리바이 분석 👤</button>
     </div>
 
-    <!-- 화면 3: 용의자 심문 -->
+    <!-- 화면 3: 용의자 심문 및 정밀 검사 -->
     <div id="screen3" class="screen">
-        <h2>👤 2단계: 용의자 및 목격자 진술 분석</h2>
-        <p style="margin-bottom: 20px;">아래의 진술을 읽고, 실험 결과와 비교하여 모순점을 찾은 뒤 활동지를 완성하세요.</p>
+        <h2>👤 2단계: 용의자 알리바이 및 타임라인 분석</h2>
+        <p style="margin-bottom: 15px;">어제 오후 5시 30분 전후, 용의자들의 행적과 소지품의 상태를 분석하세요.</p>
         
         <div class="suspect-grid">
+            <!-- 박탁구 -->
             <div class="suspect-card">
                 <div class="avatar">👦</div>
                 <div class="suspect-details">
-                    <span class="suspect-name">박탁구 (증거물 C 탁구채의 주인)</span>
-                    <p class="suspect-quote">"어제 방과 후에 탁구채를 과학실 비품함에 깜빡하고 두고 갔을 뿐이에요! 그리고 보시다시피 제 손엔 상처 하나 없다고요! 전 범인이 아닙니다!"</p>
+                    <span class="suspect-name">박탁구 (증거물 C 탁구채 주인)</span>
+                    <p class="suspect-quote">"어제 <strong>오후 5시부터 6시까지</strong> 과학실 옆 탁구실에서 혼자 연습을 하다가 탁구채를 비품함에 넣어두고 교문을 나섰어요. 손의 상처요? 이건 오늘 아침에 종이에 베인 거예요! 어제 과학실 문 근처에는 가지도 않았습니다."</p>
                 </div>
             </div>
+            
+            <!-- 김야구 -->
             <div class="suspect-card">
                 <div class="avatar">🧢</div>
                 <div class="suspect-details">
-                    <span class="suspect-name">김야구 (증거물 A 야구 배트의 주인)</span>
-                    <p class="suspect-quote">"어제 과학실 앞 복도에서 혼자 배트 휘두르는 연습을 하다가 실수로 문틀을 세게 쳤어요. 배트가 알루미늄 재질이라 부딪히면서 앞부분이 찌그러졌죠. 그것 때문에 절 의심하시는 건 억울합니다!"</p>
+                    <span class="suspect-name">김야구 (증거물 A 야구 배트 주인)</span>
+                    <p class="suspect-quote">"어제 <strong>오후 5시 15분쯤</strong> 과학실 복도 철제 문틀을 배트로 세게 치며 장난을 치다가, 배트에 긁혀 손가락을 심하게 다쳤어요. 피가 많이 나서 바로 <strong>오후 5시 25분에 보건실로 가서 치료를 받고 6시까지 누워있었습니다.</strong> 배트에 묻은 붉은 건 제 피가 맞을 거예요."</p>
                 </div>
             </div>
-            <div class="suspect-card witness">
-                <div class="avatar">🩺</div>
+            
+            <!-- 최가축 -->
+            <div class="suspect-card">
+                <div class="avatar">🧑</div>
                 <div class="suspect-details">
-                    <span class="suspect-name">이보건 (보건실 목격자)</span>
-                    <p class="suspect-quote">"어제 방과 후에 보건실에 있었는데, 김야구 걔가 손을 날카로운 데 찔려 피가 흐른다며 뛰어왔어요! 보건 선생님이 안 계셔서 김야구가 직접 <strong>빨간색 소독약(포비돈 요오드액)을 자기 손이랑 들고 있던 알루미늄 배트에 엄청 들이붓고 닦아내더라고요.</strong>"</p>
+                    <span class="suspect-name">최가축 (증거물 B 지팡이 주인 / 생물동아리)</span>
+                    <p class="suspect-quote">"어제 생물실에서 키우는 실험용 토끼가 탈출해서 <strong>오후 5시 20분부터 40분까지</strong> 과학실 앞 복도를 뒤지며 토끼를 잡으러 다녔어요. 겨우 잡았는데 토끼가 제 지팡이를 물어뜯어서 지팡이 손잡이에 붉은 생채기와 토끼 피가 묻었습니다. 전 협박장을 쓴 적이 없어요!"</p>
                 </div>
             </div>
         </div>
         
-        <div class="story-box" style="border-left-color: #ffeb3b; margin-top: 25px;">
-            📢 <strong>최종 미션:</strong> 모든 단서가 확보되었습니다. 활동지의 수사 보고서 양식에 <strong>최종 범인</strong>과 <strong>범인으로 지목한 과학적 이유(위양성 현상 언급 필수)</strong>를 서술하여 선생님께 제출하세요!
+        <div class="story-box" style="border-left-color: #ff4a4a; margin-top: 25px; font-weight: bold; color: #fff;">
+            🚨 [수사 힌트] 루미놀 반응 결과(실험)와 용의자들의 알리바이 시간(5시 30분), 그리고 루미놀의 한계점(동물의 피/금속 반응)을 조합하면 단 한 명의 거짓말쟁이가 드러납니다.
         </div>
     </div>
 </div>
@@ -125,9 +125,6 @@
     function nextScreen(screenNum) {
         document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
         document.getElementById('screen' + screenNum).classList.add('active');
-    }
-    function showLabAlert() {
-        document.getElementById('labAlertBox').style.display = 'block';
     }
 </script>
 </body>
