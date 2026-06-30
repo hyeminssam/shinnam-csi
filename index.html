@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신남중 과학수사대 : 과학실 폭발 예고 사건</title>
+    <title>신남중 과학수사대 : 과학실 미스터리</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Noto+Sans+KR:wght@300;400;700&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,11 +25,14 @@
         .evidence-card { background: #151a21; padding: 20px; border-radius: 12px; border: 1px solid #2f3b4c; }
         .item-graphic { width: 90px; height: 90px; margin: 15px auto; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; background: #252e3b; }
         
-        .clickable-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px; }
-        .click-card { background: #151a21; padding: 15px; border-radius: 8px; border: 1px dashed #45f3ff; cursor: pointer; text-align: left; transition: 0.2s; }
-        .click-card:hover { background: #252e3b; }
-        .hidden-info { display: none; margin-top: 10px; padding: 10px; background: #0b0c10; border-left: 3px solid #ffeb3b; font-size: 14px; color: #fff; }
-        
+        .suspect-block { background: #151a21; padding: 20px; margin: 15px 0; border-radius: 12px; border: 1px solid #2f3b4c; text-align: left; }
+        .suspect-meta { display: flex; align-items: center; margin-bottom: 10px; }
+        .avatar { width: 50px; height: 50px; border-radius: 50%; background: #252e3b; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-right: 15px; }
+        .suspect-name { font-weight: bold; color: #45f3ff; font-size: 18px; }
+        .dialogue-box { background: #0b0c10; padding: 12px; border-radius: 6px; font-size: 14px; margin-bottom: 10px; line-height: 1.6; border-left: 3px solid #45f3ff; }
+        .interrogate-btn { background: #252e3b; color: #ffeb3b; border: 1px solid #ffeb3b; padding: 6px 12px; font-size: 13px; cursor: pointer; border-radius: 4px; font-weight: bold; }
+        .interrogate-btn:hover { background: #ffeb3b; color: #0b0c10; }
+
         .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; background: #151a21; text-align: left; font-size: 14px; }
         .data-table th, .data-table td { border: 1px solid #2f3b4c; padding: 10px; }
         .data-table th { background: #252e3b; color: #45f3ff; }
@@ -38,23 +41,23 @@
 <body>
 
 <div class="container">
-    <div class="digital-header">SINNAM MIDDLE SCHOOL • CSI SYSTEM</div>
+    <div class="digital-header">SINNAM MIDDLE SCHOOL • ADVANCED CSI SYSTEM</div>
     
-    <!-- 1단계: 오프닝 -->
+    <!-- 1단계 -->
     <div id="screen1" class="screen active">
         <h1>🚨 신남중 <span>과학실 폭발 예고</span> 사건</h1>
         <div class="story-box">
-            <div class="crimson-alert">🕵️‍♂️ 수사 지침: 실제 실험 결과와 용의자들의 말을 비교하세요!</div>
-            <p><strong>[사건 내용]</strong> 어제 방과 후인 <strong>오후 5시 30분</strong>, 누군가 과학실 문에 협박 편지를 붙였습니다. 범인은 편지를 붙이다가 날카로운 철문 모서리에 손을 베여 피를 흘렸습니다.</p>
-            <p style="margin-top: 10px;">교실은 깨끗하게 청소되어 있었지만, 눈에 보이지 않는 흔적을 찾기 위해 현장 주변에서 <strong>3개의 의심스러운 증거물</strong>을 수거했습니다. 수사 노트를 채우며 진범을 찾으세요!</p>
+            <div class="crimson-alert">🕵️‍♂️ 정밀 지침: 겉보기 단서에 속지 마십시오. 심문할수록 진실이 바뀝니다.</div>
+            <p><strong>[사건 개요]</strong> 어제 저녁 <strong>오후 5시 30분</strong>, 누군가 과학실 문에 협박 편지를 붙였습니다. 범인은 편지를 붙이다 날카로운 모서리에 손을 베여 피를 흘렸습니다.</p>
+            <p style="margin-top: 10px;">현장 근처에서 붉은 흔적이 있는 <strong>증거물 3개</strong>를 수거했습니다. 눈앞의 실제 실험 결과와 수사망을 교차하여 진짜 범인을 밝혀내세요!</p>
         </div>
-        <button class="btn" onclick="nextScreen(2)">1단계: 실험실로 이동하기 🧪</button>
+        <button class="btn" onclick="nextScreen(2)">1단계: 실제 루미놀 실험 기록 🧪</button>
     </div>
 
-    <!-- 2단계: 루미놀 검사 -->
+    <!-- 2단계 -->
     <div id="screen2" class="screen">
-        <h2>🧪 1단계: 실제 루미놀 실험하기</h2>
-        <p style="margin-bottom: 20px;">눈앞에 있는 3개의 펠트지 그림에 루미놀을 직접 뿌려보고, 푸른 빛이 나는지 <strong>[활동지]</strong>에 적으세요.(교실 불 끄고 모든 조 동시에 진행) </p>
+        <h2>🧪 1단계: 증거물 확보 및 실제 루미놀 실험</h2>
+        <p style="margin-bottom: 20px;">현장에서 수거한 3개의 물건입니다. 눈앞의 펠트지에 루미놀을 분사하여 반응 여부를 <strong>[활동지 1번]</strong>에 적으세요.</p>
         
         <div class="evidence-container">
             <div class="evidence-card"><span>증거물 A</span><div class="item-graphic">🏏</div><p><strong>야구 배트</strong></p></div>
@@ -63,96 +66,75 @@
         </div>
         
         <div class="story-box" style="margin-top:25px; font-size:14px; border-color:#ffeb3b;">
-            💡 <strong>[중요한 과학 상식 복습]</strong><br>
-            루미놀 용액은 사람의 피뿐만 아니라 <strong>녹슨 철, 구리 같은 금속</strong>이나 <strong>동물의 피</strong>와 반응해도 똑같이 푸른 빛을 냅니다. 그래서 루미놀이 빛났다고 해서 무조건 '사람의 피'라고 단정 지을 수 없습니다!
+            💡 <strong>[루미놀 수사 가이드]</strong><br>
+            루미놀은 범인이 아무리 깨끗하게 닦거나 비누로 씻어도 피 성분을 찾아내 푸른 빛을 뿜습니다. 하지만 피가 아닌 <strong>녹슨 철, 구리 같은 금속</strong>이나 <strong>동물의 피</strong>에도 똑같이 푸른 빛을 내는 한계가 있습니다.
         </div>
-        <button class="btn" onclick="nextScreen(3)">2단계: 현장 샅샅이 조사하기 🔍</button>
+        <button class="btn" onclick="nextScreen(3)">2단계: 심문실 입장 및 단서 추적 👤</button>
     </div>
 
-    <!-- 3단계: 현장 감식 (클릭 단서) -->
+    <!-- 3단계 -->
     <div id="screen3" class="screen">
-        <h2>🔍 2단계: 범죄 현장 꼼꼼히 돋보기 조사</h2>
-        <p>글자를 클릭하여 과학실 주변에서 발견된 진짜 단서 3가지를 확인하세요.</p>
+        <h2>👤 2단계: 용의자 심문 및 연속 단서 추적</h2>
+        <p style="margin-bottom: 15px;">각 용의자의 이야기를 듣고, <strong>[추가 심문하기]</strong> 버튼을 눌러 숨겨진 모순을 파헤치세요.</p>
         
-        <div class="clickable-grid">
-            <div class="click-card" onclick="showHidden('site1')">
-                📌 <strong>1. 과학실 철문 모서리 조사</strong>
-                <div id="site1" class="hidden-info">📍 범인이 다친 철문 모서리에 붉은 얼룩과 함께 <strong>하얀색 탁구공의 찌꺼기</strong>가 긁혀서 껴 있습니다.</div>
-            </div>
-            <div class="click-card" onclick="showHidden('site2')">
-                📌 <strong>2. 복도 수돗가 조사</strong>
-                <div id="site2" class="hidden-info">📍 방과 후에 누군가 수돗가에서 무언가를 비누로 뽀드득 소리가 나게 열심히 씻고 간 흔적이 있습니다.</div>
-            </div>
-            <div class="click-card" onclick="showHidden('site3')">
-                📌 <strong>3. 과학실 바닥 조사</strong>
-                <div id="site3" class="hidden-info">📍 교실 바닥 구석에서 <strong>토끼가 먹는 사료 알갱이</strong>가 2개 떨어져 있습니다.</div>
-            </div>
+        <!-- 박탁구 -->
+        <div class="suspect-block">
+            <div class="suspect-meta"><div class="avatar">👦</div><div class="suspect-name">박탁구 (탁구채 주인)</div></div>
+            <div id="talk_tag" class="dialogue-box">"어제 5시부터 6시까지 체육관 탁구실에서 연습했어요. 제 탁구채는 어제 깨끗하게 비누로 닦아서 넣어둔 거예요. 손에 상처요? 어제 탁구 치다가 탁구대에 세게 긁혀서 피가 좀 났는데, 대수롭지 않아서 보건실은 안 갔어요."</div>
+            <button class="interrogate-btn" onclick="deepInterrogate('tag')">⚠️ 탁구채 정밀 조사 및 추가 심문</button>
         </div>
-        <button class="btn" onclick="nextScreen(4)">3단계: 용의자 심문하기 🗣️</button>
+
+        <!-- 김야구 -->
+        <div class="suspect-block">
+            <div class="suspect-meta"><div class="avatar">Cap</div><div class="suspect-name">김야구 (야구 배트 주인)</div></div>
+            <div id="talk_yagu" class="dialogue-box">"어제 복도에서 오래되어 붉은 녹이 가득 낀 철제 사물함을 배트로 쾅쾅 치면서 놀았어요. 배트 끝에 붉은 녹때가 잔뜩 묻었길래 물티슈로 닦아두었습니다. 손의 상처는 어제 방과 후에 길고양이 만지다가 긁힌 상처예요."</div>
+            <button class="interrogate-btn" onclick="deepInterrogate('yagu')">⚠️ 야구 배트 정밀 조사 및 추가 심문</button>
+        </div>
+
+        <!-- 최가축 -->
+        <div class="suspect-block">
+            <div class="suspect-meta"><div class="avatar">🧑</div><div class="suspect-name">최가축 (지팡이 주인 / 생물동아리)</div></div>
+            <div id="talk_gachuk" class="dialogue-box">"어제 다리가 아파서 지팡이를 짚고 다녔어요. 5시 20분쯤 생물실 실험용 토끼가 탈출해서 잡으려고 지팡이를 휘둘렀는데, 토끼가 손잡이를 물어서 토끼 피가 묻었습니다. 전 손 안 다쳤어요!"</div>
+            <button class="interrogate-btn" onclick="deepInterrogate('gachuk')">⚠️ 지팡이 정밀 조사 및 추가 심문</button>
+        </div>
+
+        <button class="btn" onclick="nextScreen(4)">3단계: 국과수 최종 혈액 감정 🧪</button>
     </div>
 
-    <!-- 4단계: 용의자 심문 (클릭 단서) -->
+    <!-- 4단계 -->
     <div id="screen4" class="screen">
-        <h2>🗣️ 3단계 & 4단계: 용의자들의 알리바이 확인</h2>
-        <p style="margin-bottom:15px;">이름을 클릭하여 용의자들이 어제 오후 5시 30분에 무얼 했는지 읽어보세요.</p>
-        
-        <div class="clickable-grid" style="grid-template-columns: 1fr;">
-            <div class="click-card" onclick="showHidden('sus1')" style="border-left: 5px solid #4caf50;">
-                👦 <strong>[용의자 1] 박탁구 (탁구채 주인) - 이야기 보기</strong>
-                <div id="sus1" class="hidden-info">
-                    "어제 5시부터 6시까지 과학실 바로 옆 탁구실에서 혼자 탁구공을 치며 연습했어요. 손가락에 감은 밴드요? 이건 오늘 아침에 종이에 베인 거예요! 어제는 다친 적 없어요. 그리고 제 탁구채는 <strong>비누로 엄청 깨끗하게 씻어서</strong> 비품함에 넣어두었습니다!"
-                </div>
-            </div>
-            <div class="click-card" onclick="showHidden('sus2')" style="border-left: 5px solid #4caf50;">
-                🧢 <strong>[용의자 2] 김야구 (야구 배트 주인) - 이야기 보기</strong>
-                <div id="sus2" class="hidden-info">
-                    "어제 오후 5시 15분쯤 복도에서 철로 된 문틀을 배트로 쾅쾅 치며 장난치다가, 날카로운 끝에 손을 찔렸어요. 피가 뚝뚝 나서 깜짝 놀라 <strong>5시 25분에 바로 보건실로 뛰어가서 치료받고 6시까지 침대에 누워있었습니다.</strong> 배트에 묻은 붉은 건 제 피일 거예요."
-                </div>
-            </div>
-            <div class="click-card" onclick="showHidden('sus3')" style="border-left: 5px solid #ff9800;">
-                🧑 <strong>[용의자 3] 최가축 (지팡이 주인 / 생물동아리) - 이야기 보기</strong>
-                <div id="sus3" class="hidden-info">
-                    "어제 오후 5시 20분부터 40분까지 복도에 돌아다녔어요. 생물실 실험용 토끼가 탈출해서 그걸 잡으려고 제가 짚던 지팡이를 휘둘렀거든요. 토끼를 잡다가 지팡이 손잡이에 토끼 피가 조금 묻었습니다. 전 협박장은 모릅니다."
-                </div>
-            </div>
-        </div>
-        <button class="btn" onclick="nextScreen(5)">5단계: 정밀 과학 분석 결과 보기 🧪</button>
-    </div>
-
-    <!-- 5단계: 최종 정밀 분석 -->
-    <div id="screen5" class="screen">
-        <h2>🧪 5단계: 국과수 정밀 연구 결과 보고서</h2>
-        <p>루미놀의 한계점을 극복하기 위해 병원에서 쓰는 정밀 검사 장비로 성분을 분석한 결과입니다.</p>
+        <h2>🧪 3단계: 국과수 정밀 성분 분석 보고서</h2>
+        <p style="margin-bottom: 15px;">루미놀 반응이 나온 물질들이 '진짜 사람 피'가 맞는지 정밀 기계로 교차 검증한 최종 보고서입니다.</p>
         
         <table class="data-table">
             <thead>
                 <tr>
                     <th>증거물</th>
                     <th>사람의 피가 맞을까?</th>
-                    <th>그 외에 검출된 성분</th>
+                    <th>표면 정밀 분석 결과</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><strong>증거물 A (야구 배트)</strong></td>
                     <td style="color:#ff4a4a; font-weight:bold;">아님 (사람 피 아님)</td>
-                    <td>문틀을 때릴 때 묻은 <strong>철문의 붉은 '녹' 성분</strong></td>
+                    <td>피 성분 없음. 붉은색 <strong>산화철(철문 녹)</strong> 성분 검출</td>
                 </tr>
                 <tr>
                     <td><strong>증거물 B (지팡이)</strong></td>
-                    <td style="color:#ff4a4a; font-weight:bold;">아님 (사람 피 아님)</td>
-                    <td><strong>동물(토끼)</strong>의 혈액 성분</td>
+                    <td style="color:#4caf50; font-weight:bold;">맞음! (사람 피가 확실함)</td>
+                    <td><strong>인간 헤모글로빈</strong> 성분 일치</td>
                 </tr>
                 <tr>
                     <td><strong>증거물 C (탁구채)</strong></td>
-                    <td style="color:#4caf50; font-weight:bold;">맞음! (사람 피가 확실함!)</td>
-                    <td>비누 거품 성분</td>
+                    <td style="color:#ff4a4a; font-weight:bold;">아님 (사람 피 아님)</td>
+                    <td>사람 피 없음. <strong>동물(토끼)의 혈액</strong> 성분 다량 검출</td>
                 </tr>
             </tbody>
         </table>
         
         <div class="story-box" style="border-left-color: #ff4a4a; margin-top: 25px; font-weight: bold; color: #fff;">
-            🚨 [수사 종료] 모든 비밀이 밝혀졌습니다! 루미놀은 범인이 아무리 비누로 깨끗이 씻어도 피를 찾아내지만, 동물 피나 녹에도 반응한다는 한계가 있습니다. 이를 바탕으로 활동지를 완성하고 진짜 범인을 검거하세요!
+            🚨 [최종 경고] 국과수 결과를 확인하셨습니까? 지팡이에서 진짜 사람 피가 나왔습니다! 하지만 최가축은 손을 다치지 않았다고 했습니다. 이 피는 누구의 피이며, 진범은 과연 누구일까요? 용의자들의 2차 진술과 국과수 결과를 엮어 활동지에 서술형 수사 보고서를 작성하세요!
         </div>
     </div>
 </div>
@@ -162,9 +144,25 @@
         document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
         document.getElementById('screen' + screenNum).classList.add('active');
     }
-    function showHidden(id) {
-        const target = document.getElementById(id);
-        target.style.display = (target.style.display === 'block') ? 'none' : 'block';
+
+    function deepInterrogate(suspect) {
+        const box = document.getElementById('talk_' + suspect);
+        if (suspect === 'tag') {
+            box.innerHTML = `🚨 <strong>[정밀 감식 결과]:</strong> 탁구채 모서리에서 붉은 얼룩이 발견되었으나, 박탁구는 "어제 탁구대(나무)에 긁혀서 피가 났다"고 했습니다. 하지만 과학실 문틀은 날카로운 <strong>'철문'</strong>입니다.<br><br>
+            💬 <strong>[2차 압박 심문]:</strong> "박탁구, 너 어제 최가축한테 탁구채 빌려줬다며?"<br>
+            👉 <strong>박탁구의 자백:</strong> "앗... 사실 어제 5시 15분쯤 최가축이 생물실 토끼 간식을 사러 간다면서 제 탁구채를 잠깐 빌려 가긴 했어요! 자기가 가방에 넣어가서 토끼 사료를 퍼 담을 주걱 대용으로 썼다나 뭐라나... 그래서 탁구채에 토끼 피가 묻은 걸지도 몰라요!"`;
+            box.style.borderLeftColor = "#ff4a4a";
+        } else if (suspect === 'yagu') {
+            box.innerHTML = `🚨 <strong>[정밀 감식 결과]:</strong> 야구 배트 표면에서 붉은 흔적이 지워진 자국이 보입니다.<br><br>
+            💬 <strong>[2차 압박 심문]:</strong> "김야구, 너 어제 다쳐서 보건실에 있었다며?"<br>
+            👉 <strong>김야구의 진술:</strong> "네, 맞아요! 어제 5시 15분에 철제 사물함 치다가 손 베여서 5시 25분부터 6시까지 계속 보건실 침대에 누워있었다니까요? 보건 선생님도 증인이에요! 제 배트에서 루미놀 반응이 나온 건 배트에 묻어있던 사물함의 붉은 철 녹 때문이 확실해요!"`;
+            box.style.borderLeftColor = "#ff4a4a";
+        } else if (suspect === 'gachuk') {
+            box.innerHTML = `🚨 <strong>[정밀 감식 결과]:</strong> 지팡이 손잡이에서 비누로 박박 닦은 흔적이 발견되었습니다. <br><br>
+            💬 <strong>[2차 압박 심문]:</strong> "최가축, 지팡이에서 진짜 사람 피가 나왔다. 손도 안 다쳤다면서 이게 무슨 피냐?"<br>
+            👉 <strong>최가축의 자백:</strong> "으윽... 사실 어제 오후 5시 30분에 제가 과학실 문에 폭발 예고장을 붙였어요... 편지 붙이다 철문에 손을 깊게 베여서 제가 짚고 있던 지팡이 손잡이에 피가 엄청 묻었습니다. 들킬까 봐 수돗가에서 비누로 열심히 닦았는데... 루미놀은 닦아도 나온다더니 진짜였군요... 죄송합니다."`;
+            box.style.borderLeftColor = "#ff4a4a";
+        }
     }
 </script>
 </body>
